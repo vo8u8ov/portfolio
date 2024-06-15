@@ -12,20 +12,37 @@
         flex-direction: column;
         align-items: center;
       }
-      video {
-        margin-top: 0; /* 動画の上部余白をリセット */
+      .video-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 10px; /* 動画間の間隔を調整 */
+        padding: 10px;
+        box-sizing: border-box;
       }
-      h1,
+      video {
+        flex: 1;
+        max-width: 48%;
+        height: auto;
+      }
       p {
-        margin-bottom: 5px; /* テキストとビデオの間隔を調整 */
+        font-size: 1.2em;
+        color: #000000;
+        margin-bottom: 5px;
       }
     </style>
   </head>
   <body>
-    <!-- <p>以下はUnityポートフォリオ動画です：</p> -->
-    <video width="960" height="720" controls>
-      <source src="Movie_008_compressed.mp4?t=<?=time()?>" type="video/mp4" />
-    </video>
-    <h1>ポートフォリオ紹介</h1>
+    <p>Unityポートフォリオ動画です</p>
+    <br />
+    <div class="video-container">
+      <video controls>
+        <source src="Movie_008_compressed.mp4?t=<?=time()?>" type="video/mp4" />
+      </video>
+
+      <video controls>
+        <source src="movie_003_compressed.mp4?t=<?=time()?>" type="video/mp4" />
+      </video>
+    </div>
   </body>
 </html>
