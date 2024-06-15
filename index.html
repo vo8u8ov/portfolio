@@ -6,29 +6,44 @@
     <title>ポートフォリオ</title>
     <style>
       body {
-        margin: 0; /* ボディの余白をリセット */
+        margin: 0;
         padding: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: "Poppins", sans-serif;
+        background-color: #f9f9f9;
       }
       .video-container {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         width: 100%;
-        gap: 10px; /* 動画間の間隔を調整 */
+        gap: 10px;
         padding: 10px;
         box-sizing: border-box;
       }
       video {
-        flex: 1;
-        max-width: 48%;
+        flex: 1 1 30%;
+        max-width: 30%;
         height: auto;
       }
       p {
         font-size: 1.2em;
         color: #000000;
         margin-bottom: 5px;
+      }
+      @media (max-width: 900px) {
+        video {
+          flex: 1 1 45%;
+          max-width: 45%;
+        }
+      }
+      @media (max-width: 600px) {
+        video {
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
       }
     </style>
   </head>
@@ -42,6 +57,10 @@
 
       <video controls>
         <source src="movie_003_compressed.mp4?t=<?=time()?>" type="video/mp4" />
+      </video>
+
+      <video controls>
+        <source src="movie_009_compressed.mp4?t=<?=time()?>" type="video/mp4" />
       </video>
     </div>
   </body>
