@@ -37,6 +37,11 @@
         font-size: 10px;
         bottom: 0;
       }
+      .image {
+        flex: 1 1 30%;
+        max-width: 30%;
+        height: auto;    
+      }
       @media (max-width: 900px) {
         video {
           flex: 1 1 45%;
@@ -90,6 +95,9 @@
       <video controls>
         <source src="Movie_034.mp4?t=<?=time()?>" type="video/mp4" />
       </video>
+
+      <img src="BezierCurve.png?t=<?=time()?>"  class="image">
+      </img>
     </div>
     <p class="footer">※一部mixamoのモデル・アニメーションを使用しています。</p>
   </body>
